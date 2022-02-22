@@ -22,9 +22,9 @@ public class casino extends javax.swing.JFrame {
      Hilo2 hilo2;
      Hilo3 hilo3;
      
-     Integer a=0;
-     Integer b=0;
-     Integer c=0;
+     Integer a=4;
+     Integer b=4;
+     Integer c=4;
      Random random = new Random();
    
      
@@ -103,17 +103,15 @@ public class casino extends javax.swing.JFrame {
             
             for(int i = 1; i <= 10; i = i - 1)
             {
-                int min = 1;
-		int max = 3;
+                
+                
 		int value = random.nextInt(3 + 1) + 1;
-                
-                
                 if(value ==1){
                 a=1;
                 scaleImage();
             
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -127,7 +125,7 @@ public class casino extends javax.swing.JFrame {
                 a=2;
                 scaleImage2();
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -140,7 +138,7 @@ public class casino extends javax.swing.JFrame {
                 scaleImage3();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -161,18 +159,16 @@ public class casino extends javax.swing.JFrame {
             
             for(int i = 1; i <= 10; i = i - 1)
             {
-                int min = 1;
-		int max = 3;
-		int value = random.nextInt(3 + 1) + 1;
                 
                 
+                int value = random.nextInt(3 + 1) + 1;
                 if(value ==1){
                 b=1;
                
                 scaleImage4();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -183,7 +179,7 @@ public class casino extends javax.swing.JFrame {
                 scaleImage5();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -194,7 +190,7 @@ public class casino extends javax.swing.JFrame {
                 scaleImage6();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -214,19 +210,15 @@ public class casino extends javax.swing.JFrame {
             
             for(int i = 1; i <= 10; i = i - 1)
             {
-                
-                int min = 1;
-		int max = 3;
-		int value = random.nextInt(3 + 1) + 1;
-                
-                
+              
+                int value = random.nextInt(3 + 1) + 1;
                 if(value ==1){
                 c=1;
                
                 scaleImage7();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -238,7 +230,7 @@ public class casino extends javax.swing.JFrame {
                 scaleImage8();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -250,7 +242,7 @@ public class casino extends javax.swing.JFrame {
                 scaleImage9();
                 
                 try {
-                    Thread.sleep(75);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(casino.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -384,8 +376,14 @@ public class casino extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         hilo3.stop();
         
+        ganar ganar = new ganar();
+        perder perder = new perder();
+        
         if(a == b && a==b && b==c){
-            System.out.println("ganaste");
+          ganar.setVisible(true);
+        }else
+        {
+          perder.setVisible(true);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
